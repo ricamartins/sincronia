@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sincronia</title>
+</head>
+
+<body>
+
+    <div class="main-panel">
+        <button onclick="rouletteRandomSpin()">girar roleta</button>
+        <button id="cover-button" onclick="toggleCover()">fechar</button>
+    </div>
+    <div class="tuner">
+        <div id="roulette" class="roulette" data-rotated-degrees=0></div>
+        <div id="cover" class="cover" data-rotated-degrees=0></div>
+        <button class="pointer-button left-button" onclick="rotatePointer('left')">esquerda</button>
+        <button class="pointer-button right-button" onclick="rotatePointer('right')">direita</button>
+        <div id="pointer-base" class="pointer-base" data-rotated-degrees=0>
+            <div class="pointer"></div>
+        </div>
+        <div class="bottom-support"></div>
+        <button class="card-button" onclick="changeCard()">trocar</button>
+        <div id="card" class="card">
+            <div id="left-card" class="word-container left-word"><span id="left-word" class="word"></span></div>
+            <div id="right-card" class="word-container right-word"><span id="right-word" class="word"></span></div>
+        </div>
+    </div>
+
+    <script src="./js/cards.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
