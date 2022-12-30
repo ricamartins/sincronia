@@ -98,23 +98,20 @@ const changeCard = () => {
     rightWord.innerText = words[1]
 }
 
-const POINTER = {
-    leftInterval: null,
-    rightInterval: null
-}
+var leftInterval, rightInterval = 0
 
 document.getElementById('turn-pointer-left').addEventListener('touchstart', () => {
-    POINTER.leftInterval = setInterval(() => rotatePointer('left'), 10)
+    leftInterval = setInterval(() => rotatePointer('left'), 10)
 })
 
 document.getElementById('turn-pointer-left').addEventListener('touchend', () => {
-    clearInterval(POINTER.leftInterval)
+    clearInterval(leftInterval)
 })
 
 document.getElementById('turn-pointer-right').addEventListener('touchstart', () => {
-    POINTER.rightInterval = setInterval(() => rotatePointer('right'), 10)
+    rightInterval = setInterval(() => rotatePointer('right'), 10)
 })
 
 document.getElementById('turn-pointer-right').addEventListener('touchend', () => {
-    clearInterval(POINTER.rightInterval)
+    clearInterval(rightInterval)
 })
