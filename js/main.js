@@ -100,18 +100,22 @@ const changeCard = () => {
 
 var leftInterval, rightInterval = 0
 
-document.getElementById('turn-pointer-left').addEventListener('touchstart', () => {
+document.getElementById('turn-pointer-left').addEventListener('touchstart', (e) => {
+    e.preventDefault()
     leftInterval = setInterval(() => rotatePointer('left'), 10)
 })
 
-document.getElementById('turn-pointer-left').addEventListener('touchend', () => {
+document.getElementById('turn-pointer-left').addEventListener('touchend', (e) => {
+    e.preventDefault()
     clearInterval(leftInterval)
 })
 
-document.getElementById('turn-pointer-right').addEventListener('touchstart', () => {
+document.getElementById('turn-pointer-right').addEventListener('touchstart', (e) => {
+    e.preventDefault()
     rightInterval = setInterval(() => rotatePointer('right'), 10)
 })
 
-document.getElementById('turn-pointer-right').addEventListener('touchend', () => {
+document.getElementById('turn-pointer-right').addEventListener('touchend', (e) => {
+    e.preventDefault()
     clearInterval(rightInterval)
 })
